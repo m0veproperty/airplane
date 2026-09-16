@@ -1,0 +1,11 @@
+{
+  "name": "aero-local-replay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node verify-mirror.mjs && node prepare-replay.mjs"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}

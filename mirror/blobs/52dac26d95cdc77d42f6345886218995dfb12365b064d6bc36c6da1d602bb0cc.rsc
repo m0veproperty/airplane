@@ -1,0 +1,12 @@
+:HL["/_next/static/chunks/234ed5a0f0f44b93.css?dpl=dpl_4iRYGRg2qG3QrPUeenWnD8a26GTT","style"]
+:HL["/_next/static/chunks/d886d144cfb3a233.css?dpl=dpl_4iRYGRg2qG3QrPUeenWnD8a26GTT","style"]
+:HL["/_next/static/chunks/9bb60b74eaab8642.css?dpl=dpl_4iRYGRg2qG3QrPUeenWnD8a26GTT","style"]
+:HL["/_next/static/media/QuariaDisplay_Regular-s.p.86d900b1.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/QuariaDisplay_RegularItalic-s.p.a0aed712.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/Unica77LLWeb_Medium-s.p.bede0e2f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/Unica77LLWeb_Regular-s.p.d6091cf5.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/chunks/6fa0331da5274396.css?dpl=dpl_4iRYGRg2qG3QrPUeenWnD8a26GTT","style"]
+:HL["/_next/static/chunks/794add4b4992d240.css?dpl=dpl_4iRYGRg2qG3QrPUeenWnD8a26GTT","style"]
+:HL["https://aerodynamics-bucket.ams3.digitaloceanspaces.com/51612f527fbd1c2172e2420e9f205993.webp","image",{"media":"(max-width: 960px)"}]
+:HL["https://aerodynamics-bucket.ams3.digitaloceanspaces.com/50b2c2e84ad9db96490e3ae62b543597.webp","image",{"media":"(min-width: 961px)"}]
+0:{"buildId":"Jsr8Sf1jMHaANAQ0zmXfi","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"lang","paramType":"d","paramKey":"en","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
