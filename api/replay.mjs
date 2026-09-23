@@ -37,6 +37,8 @@ function incomingRequest(req) {
     incoming.searchParams.delete('path');
   }
 
+  // Versioned public prefix avoids previously cached immutable chunk redirects.
+  if (pathname.startsWith('/_aero/')) pathname = '/_next/' + pathname.slice('/_aero/'.length);
   const query = incoming.searchParams.toString();
   return { localOrigin, pathname, search: query ? `?${query}` : '' };
 }
@@ -80,7 +82,7 @@ function findEntry(req) {
 }
 
 function staticPath(entry) {
-  return `/__mirror/${path.basename(entry.file)}`;
+  return `/__mirror_webgl1/${path.basename(entry.file)}`;
 }
 
 const replayCsp = [

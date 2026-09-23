@@ -1,10 +1,11 @@
 import { readFile, writeFile, mkdir, rm, copyFile } from 'node:fs/promises';
 import path from 'node:path';
+import { patchGlobe } from './globe-fallback.mjs';
 
 const ROOT = process.cwd();
 const MIRROR = path.join(ROOT, 'mirror');
 const PUBLIC = path.join(ROOT, 'public');
-const STATIC = path.join(PUBLIC, '__mirror');
+const STATIC = path.join(PUBLIC, '__mirror_webgl1');
 const manifest = JSON.parse(await readFile(path.join(MIRROR, 'manifest.json'), 'utf8'));
 const entries = manifest.entries || {};
 
@@ -31,7 +32,7 @@ function localizeText(text) {
     out = out.replaceAll(`https:\/\/${host}`, prefix.replaceAll('/', '\\/'));
     out = out.replaceAll(`//${host}`, prefix);
   }
-  return out;
+  return out.replaceAll('/_next/', '/_aero/');
 }
 
 await rm(PUBLIC, { recursive: true, force: true });
@@ -45,7 +46,8 @@ for (let i = 0; i < items.length; i += concurrency) {
     const source = path.join(MIRROR, entry.file);
     const dest = path.join(STATIC, path.basename(entry.file));
     if (isText(entry)) {
-      const text = await readFile(source, 'utf8');
+      let text = await readFile(source, 'utf8');
+      if (path.basename(entry.file) === 'bb23aea23b6414912751312af2a64198c1e254dab030e70a5368535c1763f8f1.js') text = patchGlobe(text);
       await writeFile(dest, localizeText(text));
     } else {
       await copyFile(source, dest);
